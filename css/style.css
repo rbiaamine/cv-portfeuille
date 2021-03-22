@@ -1,5 +1,5 @@
 :root{
-    --skin-color:blueviolet;   
+    --skin-color:rgb(111, 51, 167);   
     --bg-black-900: #000000;
     --bg-black-100: #dddddd;
     --bg-black-50: #eff0f4;
@@ -34,12 +34,12 @@ outline: none;
 body{
     font-size: 16px;
     line-height: 1.5;
-    overflow: hidden;
+    direction: rtl;
     background-color:var(--bg-black-50);
 }
-/* ::before,::after{
+::before,::after{
     box-sizing: border-box;
-} */
+}
 a{
     text-decoration: none;
 }
@@ -54,7 +54,6 @@ img{
 }
 .container{
     max-width: 1140px; 
-     
     margin: auto;
 }
  .row{
@@ -92,6 +91,20 @@ img{
 }
 .align-items-center {
     align-items: center;
+}
+.section-title{
+    
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width:100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title h2{
+    
+    display: inline-block;
+    margin: 0;
+    font-weight: 700;
 }
  
 /*---------Header------------*/
@@ -235,7 +248,7 @@ transition: all 0.3s ease;
 .home-section{
     position: relative;
 }
-
+/* 
 .home-section .effect{
     position: absolute;
     z-index: -1;
@@ -331,7 +344,7 @@ animation: spin 10s linear infinite;
 @keyframes splatted-jquery{
     100%, 0%{transform:translate(0) rotate(0);}
      50%{transform:translate(-100px,-100px) rotate(360deg);}
- }
+ } */
 .home-section .full-screen{
     
     padding: 50px 0;
@@ -348,53 +361,54 @@ animation: spin 10s linear infinite;
 
 .home-section .home-text{
     text-align: center  ;
+    font-size: 35px;
     
 }
-.home-section .home-text p{
+/* .home-section .home-text p{
     color: var(--text-black-300);
     font-size: 18px;
     text-transform: capitalize;
     margin: 0;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Cairo', sans-serif; }*/
     
-}
-.home-section .home-text span{
+
+.color-text{
     font-family: 'Kufam', sans-serif; 
-    font-size: 35px;
+    
     color: var(--text-black-700);
     
 }
-.home-section .home-text .color1{
+ .color1{
     animation: colored-text 7s ease infinite;
 }
-.home-section .home-text .color2{
+.color2{
     animation: colored-text1 3s ease infinite;
 }
-.home-section .home-text .color3{
+.color3{
     animation: colored-text2 6s ease infinite;
 }
-.home-section .home-text .color4{
+.color4{
     animation: colored-text3 8s ease infinite;
 }
-.home-section .home-text .color5{
+.color5{
     animation: colored-text4 10s ease infinite;
 }
-.home-section .home-text .color6{
+.color6{
     animation: colored-text2 4s ease infinite;
 }
-.home-section .home-text .color7{
+.color7{
     animation: colored-text1 6s ease infinite;
 }
-.home-section .home-text .color8{
+.color8{
     animation: colored-text 4s ease infinite;
 }
-.home-section .home-text .color9{
+.color9{
     animation: colored-text4 8s ease infinite;
 }
-.home-section .home-text .color10{
+.color10{
     animation: colored-text3 10s ease infinite;
 }
-.home-section .home-text .color11{
+.color11{
     animation: colored-text2 3s ease infinite;
 }
 
@@ -438,7 +452,7 @@ animation: spin 10s linear infinite;
    
 
 }
-.home-section .home-text h2{
+/* .home-section .home-text h2{
     font-family: 'Cairo', sans-serif; 
     font-size: 50px;
     font-weight: 700;
@@ -449,11 +463,11 @@ animation: spin 10s linear infinite;
     font-family: 'Cairo', sans-serif; 
     font-size: 25px;
     color: var(--text-black-700);
-}
-.home-section .home-text a::after{
+} */
+.btn-1::after{
     border-radius: 2rem;
 }
-.home-section .home-text a{
+.btn-1{
     font-family: 'Cairo', sans-serif; 
     font-size: 30px;
     color:var(--skin-color);
@@ -461,9 +475,9 @@ animation: spin 10s linear infinite;
     padding: 0 10px;
     padding-bottom: 7px;
     line-height: 100px;
-    transition: all 0.3s ease;
-
+    transition: all 0.3s ease
 }
+
 
 
 .home-section .home-img .img-box{
@@ -477,3 +491,159 @@ animation: spin 10s linear infinite;
 .home-section .home-img .img-box .img{
     width:100%;
 }
+.about-section{
+    min-height: 100vh;
+    padding: 80px 0 80px;
+}
+ .about-section .about-img{
+     flex: 0 0 40%;
+     max-width: 40%;
+     padding: 0 15px;
+ }
+ .about-section .about-info {
+     flex: 0 0 60%;
+     max-width: 60%;
+     padding:0 15px;
+ }
+ .about-section .about-info p{
+     font-size: 22px;
+     line-height: 36px;
+     margin-bottom: 15px;
+ }
+ .about-section .about-info .btn-1{
+     margin: 30px 20px 0 0;
+ }
+ .about-section .about-info .btn{
+     display: inline-block;
+     
+ }
+ .about-section .about-tabs{
+     
+     padding: 60px 15px 50px;
+     flex: 0 0 100%;
+     max-width: 100%;
+     text-align: center;
+ }
+ .about-section .about-tabs .tab-item{
+    display: inline-block;
+    margin: 0 5px 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 25px;
+    color: var(--text-black-600);
+    font-weight: 700;
+ }
+ .about-section .about-tabs .tab-item:hover:not(.active){
+     opacity: 0.6;
+     
+    }
+    .about-section .about-tabs .tab-item.active{
+        color: var(--skin-color);
+    }
+    
+  .about-section .about-img .social-links{
+      margin-top: 20px;
+      text-align: center;
+    }
+    .about-section .about-img .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        color: var(--text-black-600);
+        margin:0 4px;
+        border-radius: 50%;
+        transition:all 0.3s ease;
+    }
+    .about-section .about-img .social-links a::after{
+        border-radius: 50%;
+    }
+    .about-section .about-img .social-links a:hover{
+        color: var(--skin-color);
+    }
+    .about-section .skills{
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    .about-section .skills .skill-item{
+        display: flex;
+        flex-direction: row;
+        flex:0 0 50%;
+        max-width:50%;
+        padding:0 15px;
+        margin: 20px 0;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+    }
+    .about-section .skills .skill-item .fab{
+        flex: 0 0 10%;
+        max-width: 20%;
+        padding: 0 15px;
+        font-size: 45px;
+    }
+    .about-section .skills .skill-item .fa-html5{
+        color: rgb(216, 137, 34);
+    }
+    .about-section .skills .skill-item .fa-js{
+        color: rgb(216, 195, 9);
+    }
+    .about-section .skills .skill-item .fa-react{
+        color: rgb(17, 140, 197);
+    }
+    .about-section .skills .skill-item .fa-css3{
+        color: rgb(16, 16, 173);
+    }
+    .about-section .skills .skill-item .fa-php{
+        color: blueviolet;
+    }
+    .about-section .skills .skill-item .fa-laravel{
+        color: orangered;
+    }
+    .about-section .skills .skill-item .progress{
+        height: 20px;
+        border-radius: 10px;
+        position: relative;
+        flex:0 0 80%;
+        max-width:80%;
+    }
+    /* .about-section .skills .skill-item .progress::after{
+        content: "";
+        width: 60%;
+        height: 6px;
+        top: 6px;
+        left: 6px;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 9;
+        background-color: black;
+    } */
+    .about-section .skills .skill-item p{
+        font-size: 25px;
+        color: var(--text-black-600);
+        text-transform: capitalize ;
+        margin: 0 0 10px;
+        font-weight: 600;
+    }
+    
+    .about-section .skills .skill-item .progress-bar {
+        background-color: var(--text-black-600);
+        height: 6px;
+        right: 7px;
+        top: 7px;
+        position: absolute;
+        border-radius: 10px;
+        /* width: 60%; */
+        
+        
+
+    }
+    .about-section .skills .skill-item .progress-bar span{
+        display: none;
+    } 
